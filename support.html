@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index">
+<title>John15Five — Support & Help</title>
+</head>
+<body>
+<style>
+  :root {
+    --bg: #FBFAF6; --surface: #FFFFFF; --ink: #26251F; --muted: #5F6459;
+    --accent: #5B6B45; --accent-soft: #6E8154; --rule: #E7E4DA;
+    --card-shadow: 0 1px 2px rgba(38, 37, 31, 0.05); --maxw: 44rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16170F; --surface: #1E2016; --ink: #E9E7DC; --muted: #A0A492;
+      --accent: #A8BE86; --accent-soft: #90A66E; --rule: #33362A; --card-shadow: none;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #FBFAF6; --surface: #FFFFFF; --ink: #26251F; --muted: #5F6459;
+    --accent: #5B6B45; --accent-soft: #6E8154; --rule: #E7E4DA; --card-shadow: 0 1px 2px rgba(38,37,31,0.05);
+  }
+  :root[data-theme="dark"] {
+    --bg: #16170F; --surface: #1E2016; --ink: #E9E7DC; --muted: #A0A492;
+    --accent: #A8BE86; --accent-soft: #90A66E; --rule: #33362A; --card-shadow: none;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: Georgia, Cambria, "Times New Roman", ui-serif, serif;
+    line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: clamp(1.5rem, 5vw, 4rem) clamp(1.25rem, 5vw, 2rem) 5rem; }
+  header.masthead { border-bottom: 1px solid var(--rule); padding-bottom: 1.75rem; margin-bottom: 2.25rem; }
+  .eyebrow {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; font-weight: 600;
+    color: var(--accent-soft); margin: 0 0 0.65rem;
+  }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.12; margin: 0 0 0.5rem; text-wrap: balance; font-weight: 700; }
+  .sub { color: var(--muted); font-size: 1.02rem; margin: 0; }
+
+  .lede {
+    font-size: 1.1rem; background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+    border-radius: 10px; padding: 1.1rem 1.35rem; box-shadow: var(--card-shadow); margin: 0 0 2.5rem;
+  }
+  .lede p { margin: 0; }
+
+  h2 { font-size: 1.15rem; margin: 2.2rem 0 1rem; padding-top: 1.3rem; border-top: 1px solid var(--rule); font-weight: 700; }
+
+  .faq { display: block; }
+  .q { margin: 0 0 1.4rem; }
+  .q h3 { font-size: 1.02rem; margin: 0 0 0.3rem; font-weight: 700; }
+  .q p { margin: 0; color: var(--ink); }
+  .q .hint { color: var(--muted); }
+  a { color: var(--accent-soft); text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  b { font-weight: 700; }
+
+  .contact {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+    padding: 1.4rem 1.5rem; box-shadow: var(--card-shadow); margin-top: 1rem; text-align: center;
+  }
+  .contact .label {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-soft); display: block; margin-bottom: 0.5rem;
+  }
+  .contact a { font-size: 1.15rem; font-weight: 700; }
+  .contact .note { color: var(--muted); font-size: 0.92rem; margin: 0.6rem 0 0; }
+
+  footer.foot { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
+  .verse { font-style: italic; }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="eyebrow">John15Five</p>
+    <h1>Support &amp; Help</h1>
+    <p class="sub">Answers to common questions — and a real person to reach when you need one.</p>
+  </header>
+
+  <div class="lede">
+    <p>John15Five is a private, local-first Bible app. The Bible is on your device, everything you write stays encrypted on your phone, and there's no account to set up. Here's how to get the most from it.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <div class="q">
+      <h3>Is my information private?</h3>
+      <p>Yes. Your journal, prayers, highlights, and notes are <b>encrypted on your device and never leave it</b>. There's no account, no ads, and no tracking of what you read. Full details are in our <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+    <div class="q">
+      <h3>Does it work without an internet connection?</h3>
+      <p>The Bible and all reading, journaling, and prayer work <b>fully offline</b>. Only the optional study companion and AI plan features need a connection.</p>
+    </div>
+    <div class="q">
+      <h3>How do I start a reading plan?</h3>
+      <p>Open <b>Plans</b> and choose one of three ways: pick a ready-made plan, build one for what you're walking through, or photograph a printed plan from church to import it.</p>
+    </div>
+    <div class="q">
+      <h3>How do I highlight a verse or add a note?</h3>
+      <p><b>Press and hold</b> a verse while reading. You can highlight it, add a note, mark it a favorite, or add it to a named group.</p>
+    </div>
+    <div class="q">
+      <h3>Can I speak instead of type?</h3>
+      <p>Yes — tap the <b>microphone</b> in any writing box (journal, prayer, or note) to dictate. Nothing you say is saved as a recording; it's turned into text on your device.</p>
+    </div>
+    <div class="q">
+      <h3>How do I have a passage read aloud?</h3>
+      <p>Tap <b>Listen</b> at the top of the reader. It reads the passage using your phone's built-in voice. You can adjust the speed and voice in <b>Settings → Reading aloud</b>.</p>
+    </div>
+    <div class="q">
+      <h3>How do I share a plan, or open one someone sent me?</h3>
+      <p>Open a plan and tap <b>Share this plan</b> to send a copy (it carries the passages only — never your journal, prayers, or progress). To open a plan someone sent you, go to <b>Plans → Open a plan file</b>.</p>
+    </div>
+    <div class="q">
+      <h3>How do I delete a plan, mark, or entry?</h3>
+      <p>Open the plan and use <b>Delete this plan</b> at the bottom of its screen. For marks and verse groups, <b>press and hold</b> the item to remove it.</p>
+    </div>
+    <div class="q">
+      <h3>I found a bug or have an idea. What do I do?</h3>
+      <p>We'd love to hear it. Use <b>Settings → Send feedback</b> in the app, or email us directly below.</p>
+    </div>
+  </div>
+
+  <h2>Contact us</h2>
+  <div class="contact">
+    <span class="label">Email support</span>
+    <a href="mailto:john15five2026@outlook.com">john15five2026@outlook.com</a>
+    <p class="note">We read every message and aim to reply within a few days.</p>
+  </div>
+
+  <footer class="foot">
+    <p class="verse">“I am the vine; you are the branches.” — John 15:5</p>
+    <p>© 2026 FirstLight Technologies LLC. All rights reserved.</p>
+  </footer>
+</div>
+
+</body>
+</html>

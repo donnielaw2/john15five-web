@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index">
+<title>John15Five — About & Guide</title>
+</head>
+<body>
+<style>
+  :root {
+    --bg: #FBFAF6; --surface: #FFFFFF; --ink: #26251F; --muted: #5F6459;
+    --accent: #5B6B45; --accent-soft: #6E8154; --rule: #E7E4DA;
+    --card-shadow: 0 1px 2px rgba(38, 37, 31, 0.05); --maxw: 46rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16170F; --surface: #1E2016; --ink: #E9E7DC; --muted: #A0A492;
+      --accent: #A8BE86; --accent-soft: #90A66E; --rule: #33362A; --card-shadow: none;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #FBFAF6; --surface: #FFFFFF; --ink: #26251F; --muted: #5F6459;
+    --accent: #5B6B45; --accent-soft: #6E8154; --rule: #E7E4DA; --card-shadow: 0 1px 2px rgba(38,37,31,0.05);
+  }
+  :root[data-theme="dark"] {
+    --bg: #16170F; --surface: #1E2016; --ink: #E9E7DC; --muted: #A0A492;
+    --accent: #A8BE86; --accent-soft: #90A66E; --rule: #33362A; --card-shadow: none;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: Georgia, Cambria, "Times New Roman", ui-serif, serif;
+    line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: clamp(1.5rem, 5vw, 4rem) clamp(1.25rem, 5vw, 2rem) 5rem; }
+  .sans { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+  header.masthead { border-bottom: 1px solid var(--rule); padding-bottom: 2rem; margin-bottom: 2.25rem; }
+  .tick { width: 2px; height: 26px; background: var(--accent); margin-bottom: 1rem; border-radius: 2px; }
+  .eyebrow {
+    font-family: ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.14em;
+    font-size: 0.72rem; font-weight: 600; color: var(--accent-soft); margin: 0 0 0.7rem;
+  }
+  h1 { font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.1; margin: 0 0 0.65rem; text-wrap: balance; font-weight: 700; }
+  h1 .em { color: var(--accent); }
+  .sub { color: var(--muted); font-size: 1.08rem; margin: 0.4rem 0; max-width: 34rem; }
+
+  .lede {
+    font-size: 1.08rem; background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+    border-radius: 10px; padding: 1.15rem 1.35rem; box-shadow: var(--card-shadow); margin: 0 0 2.5rem;
+  }
+  .lede p { margin: 0.5rem 0; } .lede p:first-child { margin-top: 0; } .lede p:last-child { margin-bottom: 0; }
+
+  h2 {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.78rem; text-transform: uppercase;
+    letter-spacing: 0.12em; font-weight: 700; color: var(--muted);
+    margin: 2.75rem 0 0.25rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+  }
+
+  .feature { margin: 1.6rem 0; }
+  .feature h3 { color: var(--accent-soft); font-size: 1.05rem; margin: 0 0 0.35rem; font-weight: 700; letter-spacing: 0.01em; }
+  .feature > p { margin: 0; }
+  ul { margin: 0.65rem 0 0; padding-left: 0; list-style: none; }
+  li { position: relative; padding-left: 1.35rem; margin: 0.45rem 0; color: var(--muted); }
+  li::before { content: ""; position: absolute; left: 0.2rem; top: 0.72em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+  .ai-note {
+    display: inline-flex; align-items: baseline; gap: 0.5rem; font-size: 0.9rem; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 0.55rem 0.85rem; margin-top: 0.5rem;
+  }
+  .star { color: var(--accent); font-weight: 700; }
+
+  .callout {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+    padding: 1.3rem 1.45rem; box-shadow: var(--card-shadow); margin: 1.2rem 0;
+  }
+  .callout h3 { margin: 0 0 0.5rem; font-size: 1.05rem; font-weight: 700; }
+  .callout p { margin: 0.5rem 0; } .callout p:last-child { margin-bottom: 0; }
+  .callout ul li { color: var(--ink); }
+  a { color: var(--accent-soft); text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  b { font-weight: 700; color: var(--ink); }
+
+  .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-top: 1rem; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; }
+
+  footer.foot { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
+  .verse { font-style: italic; }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="tick"></div>
+    <p class="eyebrow">John15Five · A Bible app</p>
+    <h1>The Bible is the authority.<br><span class="em">The app is the trellis.</span></h1>
+    <p class="sub">A quiet, private place to spend time in God's Word — and what to expect if you're helping test it.</p>
+  </header>
+
+  <div class="lede">
+    <p>John15Five is named for <b>John 15:5</b> — “abide in Me, and you bear much fruit.” The Bible is the point; the plans, journal, and study help are a <b>trellis</b> built to support your time in the Word, never to become the vine.</p>
+    <p>The whole Bible lives on your phone and works with no signal. Everything you write — journal, prayers, highlights — stays <b>encrypted on your device</b>. There's no account, no ads, and nothing about your reading is tracked.</p>
+  </div>
+
+  <div class="callout">
+    <h3>You've been invited to test an early version</h3>
+    <p>Thank you for trying John15Five before it's public. It comes through Apple's <b>TestFlight</b> app (you'll get a link). It's a real, working app — but this is a beta, so a few things are still rough, and your honest reactions are exactly what's most useful.</p>
+    <ul>
+      <li><b>Try what you'd actually use:</b> read a chapter, start a reading plan, journal or pray alongside it, and try the study companion.</li>
+      <li><b>One known rough edge:</b> the “Listen” read-aloud uses your phone's built-in voice, so it can sound a bit robotic. We're deciding whether to add a more natural voice — your feedback helps decide.</li>
+      <li><b>How to send feedback:</b> in the app, <b>Settings → Send feedback</b>, or email <a href="mailto:john15five2026@outlook.com">john15five2026@outlook.com</a>. Tell us where it got in your way.</li>
+    </ul>
+  </div>
+
+  <p class="ai-note"><span class="star">✦</span> <span>Throughout this guide, a star marks an <b>optional AI-assisted</b> feature. These are the only parts that ever send anything to a server, and only the moment you tap.</span></p>
+
+  <h2>Reading Scripture</h2>
+
+  <div class="feature">
+    <h3>Read the Bible</h3>
+    <p>The whole Bible is on your phone and needs no connection, ever. Reading it leaves no record anywhere but your own device.</p>
+    <ul>
+      <li>Open the Read tab, choose a book, then a chapter.</li>
+      <li>Tap once to hide the bars and let it be just the text; tap again to bring them back.</li>
+      <li>Press and hold a verse to highlight it, mark it a favorite, add a note, or add it to a group.</li>
+    </ul>
+  </div>
+
+  <div class="feature">
+    <h3>Listen to a passage</h3>
+    <p>Rather hear the Word than read it? Tap Listen at the top of the reader and your phone reads the passage aloud in its own voice. On a plan day it reads that day's reading; otherwise it reads the chapter you're in.</p>
+    <ul>
+      <li>The voice comes from your phone — nothing is sent anywhere, and it works with no connection.</li>
+      <li>Tap “Stop reading” whenever you like; it also stops when you move to another chapter.</li>
+      <li>Want a more natural voice? On your phone: Settings → Accessibility → Spoken Content → Voices → English, and download one marked “Enhanced” (Ava, Samantha, and Zoe are good). John15Five uses it automatically.</li>
+    </ul>
+  </div>
+
+  <div class="feature">
+    <h3>Marks and groups</h3>
+    <p>Everything you mark is gathered under Journey → Marks. You can also collect verses into named groups you return to — “Comfort,” “Promises,” a sermon.</p>
+    <ul>
+      <li>Press and hold a verse while reading, then “Add to a group” — name a new one on the spot.</li>
+      <li>Open a group from Journey → Collections; press and hold a verse to take it back out.</li>
+    </ul>
+  </div>
+
+  <h2>Reading plans &amp; your daily rhythm</h2>
+
+  <div class="feature">
+    <h3>Reading plans</h3>
+    <p>A plan gives you a passage a day with room to reflect. Three ways to start one, all under Journey → Plans.</p>
+    <ul>
+      <li>Choose a ready-made plan from the library.</li>
+      <li><span class="star">✦</span> Build one for what you're walking through — describe your situation and the study companion writes a plan you review before it's yours.</li>
+      <li><span class="star">✦</span> Photograph a printed plan — snap the pages of a church handout and it becomes a plan you can follow.</li>
+    </ul>
+  </div>
+
+  <div class="feature">
+    <h3>Your daily rhythm</h3>
+    <p>On a plan day: read, then reflect, journal, and pray — as much or as little as you like. Nothing is required, and nothing happens unless you tap.</p>
+    <ul>
+      <li>Read today's passage, then mark the day read when you're ready.</li>
+      <li>A missed day is never a broken streak. The plan simply waits for you; there's no catching up.</li>
+      <li>Finish the whole plan and you get one quiet celebration — the only one in the app.</li>
+    </ul>
+  </div>
+
+  <h2>Reflecting: journal, prayer &amp; study</h2>
+
+  <div class="feature">
+    <h3>Journaling</h3>
+    <p>Write what a passage stirs up. Type it, or just say it out loud — there's a microphone on every writing box.</p>
+    <ul>
+      <li>The day's reading sits right above the box so you can glance back at it.</li>
+      <li>Come back to the same day and you continue the same entry; it doesn't start over.</li>
+      <li><span class="star">✦</span> “Clean this up” adds punctuation to a spoken entry — your own words are always kept.</li>
+      <li>Share a day's entry to a group, Messages, or email — only when you tap Share.</li>
+    </ul>
+  </div>
+
+  <div class="feature">
+    <h3>Prayer</h3>
+    <p>Keep the things you're praying for, and mark how they're answered. Say them aloud if that's easier; prayer is a spoken thing.</p>
+    <ul>
+      <li>Give a prayer a short title, then say or type it.</li>
+      <li>Later, add an update, mark it answered with a note, or gently set it down.</li>
+    </ul>
+  </div>
+
+  <div class="feature">
+    <h3><span class="star">✦</span> Questions to sit with</h3>
+    <p>A few open questions to send you back into the passage — never a quiz, and there's never a right answer.</p>
+    <ul>
+      <li>Answer the ones you want, by voice or typing.</li>
+      <li>“Add to my journal” saves each answer as its own entry, labeled with the question.</li>
+    </ul>
+  </div>
+
+  <div class="feature">
+    <h3><span class="star">✦</span> Understand a passage</h3>
+    <p>Ask about the background and context of what you're reading. It opens with a short commentary and lets you ask more.</p>
+    <ul>
+      <li>It stays close to Scripture and points you back to it — and to your pastor.</li>
+      <li>It never renders a verdict on matters faithful Christians disagree about.</li>
+    </ul>
+  </div>
+
+  <h2>Keeping it, and staying private</h2>
+
+  <div class="feature">
+    <h3>Your Journey</h3>
+    <p>A record of what you've read, written, and prayed, newest first. No streaks, no scores, no percentages. It fills in as you go.</p>
+  </div>
+
+  <div class="feature">
+    <h3>Keep it, print it</h3>
+    <p>Turn your reading and reflections into a clean document you can hold.</p>
+    <ul>
+      <li>On a plan: “Save this study as a PDF” — cover, passages, your journal and prayers.</li>
+      <li>On the Journal screen: “Save my journal as a PDF” — everything you've written, by day.</li>
+      <li>Print either one for a binder to keep and reread.</li>
+    </ul>
+  </div>
+
+  <div class="feature">
+    <h3>Speak instead of type</h3>
+    <p>Every place you can write has a microphone. Your voice is transcribed on your phone — the audio is never uploaded and never even saved. Only the words you see remain.</p>
+  </div>
+
+  <div class="feature">
+    <h3>Reminders</h3>
+    <p>A gentle daily nudge, if you want one, under Settings → Daily reminder. It only ever invites — it never counts a thing against you.</p>
+  </div>
+
+  <div class="callout">
+    <h3>Your privacy, plainly</h3>
+    <p>Everything you write stays on your phone, encrypted. There is no account. Only three optional features send anything to a server — building a plan, asking about a passage, and cleaning up a spoken entry — and only the moment you tap. Nothing else ever leaves, and we cannot see what you read.</p>
+    <div class="links">
+      <a href="privacy.html">Full Privacy Policy →</a>
+      <a href="support.html">Support &amp; FAQ →</a>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <p class="verse">“I am the vine; you are the branches. Whoever abides in Me… bears much fruit.” — John 15:5</p>
+    <p>Made as a trellis, not the vine. · © 2026 FirstLight Technologies LLC</p>
+  </footer>
+</div>
+
+</body>
+</html>
