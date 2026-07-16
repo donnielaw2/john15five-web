@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>John15Five — Pick a voice</title>
+<style>
+  :root {
+    --bg: #FBFAF6; --surface: #FFFFFF; --ink: #26251F; --muted: #5F6459;
+    --accent: #5B6B45; --accent-soft: #6E8154; --rule: #E7E4DA; --card-shadow: 0 1px 2px rgba(38,37,31,0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16170F; --surface:#1E2016; --ink:#E9E7DC; --muted:#A0A492; --accent:#A8BE86; --accent-soft:#90A66E; --rule:#33362A; --card-shadow:none; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family: Georgia, Cambria, "Times New Roman", ui-serif, serif; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width: 42rem; margin: 0 auto; padding: clamp(1.5rem,5vw,3.5rem) clamp(1.25rem,5vw,2rem) 4rem; }
+  .eyebrow { font-family: ui-sans-serif, system-ui, sans-serif; text-transform:uppercase; letter-spacing:0.14em; font-size:0.72rem; font-weight:600; color:var(--accent-soft); margin:0 0 0.6rem; }
+  h1 { font-size: clamp(1.8rem,5vw,2.4rem); line-height:1.12; margin:0 0 0.5rem; font-weight:700; }
+  .sub { color:var(--muted); font-size:1.02rem; margin:0 0 0.4rem; }
+  .passage { font-style: italic; color: var(--muted); font-size:0.95rem; background:var(--surface); border:1px solid var(--rule); border-left:3px solid var(--accent); border-radius:10px; padding:0.9rem 1.1rem; margin: 1.5rem 0 2rem; }
+  h2 { font-family: ui-sans-serif, system-ui, sans-serif; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em; font-weight:700; color:var(--muted); margin: 2rem 0 0.75rem; padding-top:1.25rem; border-top:1px solid var(--rule); }
+  .voice { background:var(--surface); border:1px solid var(--rule); border-radius:12px; padding:1rem 1.2rem; margin:0.85rem 0; box-shadow:var(--card-shadow); }
+  .voice .name { font-size:1.15rem; font-weight:700; }
+  .voice .name .pick { font-family: ui-sans-serif, system-ui, sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent-soft); border:1px solid var(--accent-soft); border-radius:99px; padding:0.12rem 0.5rem; margin-left:0.5rem; vertical-align:middle; }
+  .voice .desc { color:var(--muted); font-size:0.95rem; margin:0.15rem 0 0.7rem; }
+  .voice .id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:0.72rem; color:var(--muted); }
+  audio { width:100%; margin-top:0.2rem; }
+  .note { background:var(--surface); border:1px solid var(--rule); border-radius:12px; padding:1.1rem 1.25rem; margin-top:2rem; box-shadow:var(--card-shadow); }
+  .note b { font-weight:700; }
+  footer { margin-top:2.5rem; padding-top:1.25rem; border-top:1px solid var(--rule); color:var(--muted); font-size:0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">John15Five · Read-aloud</p>
+  <h1>Pick a voice</h1>
+  <p class="sub">Each clip below is <b>John 15:1–8</b> (Berean Standard Bible) read by a candidate voice, at the pace the app would use. Listen and tell me which one you like — that's the voice we generate the whole Bible in.</p>
+  <p class="passage">"I am the true vine, and My Father is the keeper of the vineyard… I am the vine and you are the branches. The one who remains in Me, and I in him, will bear much fruit."</p>
+
+  <h2>Male voices</h2>
+
+  <div class="voice">
+    <div class="name">Andrew <span class="pick">Top pick</span></div>
+    <p class="desc">Warm and natural — the newest generation. A gentle, human read.</p>
+    <audio controls preload="none" src="samples/en-US-AndrewMultilingualNeural.mp3"></audio>
+    <div class="id">en-US-AndrewMultilingualNeural</div>
+  </div>
+
+  <div class="voice">
+    <div class="name">Davis</div>
+    <p class="desc">Calm and steady — an unhurried, even narrator.</p>
+    <audio controls preload="none" src="samples/en-US-DavisNeural.mp3"></audio>
+    <div class="id">en-US-DavisNeural</div>
+  </div>
+
+  <div class="voice">
+    <div class="name">Christopher</div>
+    <p class="desc">Mature and authoritative — a fuller, weightier voice.</p>
+    <audio controls preload="none" src="samples/en-US-ChristopherNeural.mp3"></audio>
+    <div class="id">en-US-ChristopherNeural</div>
+  </div>
+
+  <div class="voice">
+    <div class="name">Guy</div>
+    <p class="desc">Clear and even — straightforward and easy to follow.</p>
+    <audio controls preload="none" src="samples/en-US-GuyNeural.mp3"></audio>
+    <div class="id">en-US-GuyNeural</div>
+  </div>
+
+  <h2>Female voices</h2>
+
+  <div class="voice">
+    <div class="name">Ava <span class="pick">Top pick</span></div>
+    <p class="desc">Warm and natural — the newest generation. Gentle and clear.</p>
+    <audio controls preload="none" src="samples/en-US-AvaMultilingualNeural.mp3"></audio>
+    <div class="id">en-US-AvaMultilingualNeural</div>
+  </div>
+
+  <div class="voice">
+    <div class="name">Emma</div>
+    <p class="desc">Soft and measured — a quiet, reflective read.</p>
+    <audio controls preload="none" src="samples/en-US-EmmaMultilingualNeural.mp3"></audio>
+    <div class="id">en-US-EmmaMultilingualNeural</div>
+  </div>
+
+  <div class="voice">
+    <div class="name">Jenny</div>
+    <p class="desc">Friendly and gentle — approachable and warm.</p>
+    <audio controls preload="none" src="samples/en-US-JennyNeural.mp3"></audio>
+    <div class="id">en-US-JennyNeural</div>
+  </div>
+
+  <div class="note">
+    <p><b>How to choose:</b> pick the one you'd most want reading Scripture to you each day. Just tell me the name (e.g., "Andrew" or "Ava"). If none feel right, say so — there are more to try, and a premium option (ElevenLabs) if you want the most human voice possible.</p>
+    <p style="margin-bottom:0;">Once you pick, I generate the audio and wire it into the app's <b>Listen</b> button, with the current phone voice as a fallback until every chapter is done.</p>
+  </div>
+
+  <footer>These are AI-generated neural voices (not the robotic phone voice) — a one-time render from the public-domain Berean Standard Bible. · John15Five</footer>
+</div>
+</body>
+</html>
