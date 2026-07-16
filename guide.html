@@ -34,7 +34,6 @@
     line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
   }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: clamp(1.5rem, 5vw, 4rem) clamp(1.25rem, 5vw, 2rem) 5rem; }
-  .sans { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
 
   header.masthead { border-bottom: 1px solid var(--rule); padding-bottom: 2rem; margin-bottom: 2.25rem; }
   .tick { width: 2px; height: 26px; background: var(--accent); margin-bottom: 1rem; border-radius: 2px; }
@@ -58,6 +57,16 @@
     margin: 2.75rem 0 0.25rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
   }
 
+  .different { margin: 0 0 0.5rem; }
+  .different h2 { border-top: none; padding-top: 0; margin-top: 0.5rem; color: var(--accent-soft); font-size: 0.82rem; }
+  .different .dlist { display: grid; gap: 0.85rem; margin-top: 1.1rem; }
+  .diff-item {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 10px;
+    padding: 0.9rem 1.1rem; box-shadow: var(--card-shadow);
+  }
+  .diff-item b { color: var(--ink); font-weight: 700; }
+  .diff-item span { color: var(--muted); }
+
   .feature { margin: 1.6rem 0; }
   .feature h3 { color: var(--accent-soft); font-size: 1.05rem; margin: 0 0 0.35rem; font-weight: 700; letter-spacing: 0.01em; }
   .feature > p { margin: 0; }
@@ -66,8 +75,8 @@
   li::before { content: ""; position: absolute; left: 0.2rem; top: 0.72em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
   .ai-note {
-    display: inline-flex; align-items: baseline; gap: 0.5rem; font-size: 0.9rem; color: var(--muted);
-    background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 0.55rem 0.85rem; margin-top: 0.5rem;
+    display: flex; align-items: baseline; gap: 0.5rem; font-size: 0.9rem; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 0.55rem 0.85rem; margin: 1.6rem 0 0;
   }
   .star { color: var(--accent); font-weight: 700; }
 
@@ -101,12 +110,25 @@
     <p>The whole Bible lives on your phone and works with no signal. Everything you write — journal, prayers, highlights — stays <b>encrypted on your device</b>. There's no account, no ads, and nothing about your reading is tracked.</p>
   </div>
 
+  <section class="different">
+    <h2>What makes it different</h2>
+    <p style="color:var(--muted);margin:0.4rem 0 0;">Most Bible apps want your time and your data. John15Five wants neither — it points you to the Word and gets out of the way.</p>
+    <div class="dlist">
+      <div class="diff-item"><b>Truly private.</b> <span>The whole Bible and everything you write live on your phone, encrypted. No account, no ads, and we cannot see what you read.</span></div>
+      <div class="diff-item"><b>Offline &amp; free, always.</b> <span>Reading, journaling, and prayer work with no connection, and Scripture is never behind a paywall.</span></div>
+      <div class="diff-item"><b>AI that can't rewrite Scripture.</b> <span>The study help points to real verses the app shows from the Bible on your phone — it never writes or paraphrases Scripture, and never rules on what faithful Christians disagree about.</span></div>
+      <div class="diff-item"><b>Made for your life.</b> <span>Describe what you're walking through and it builds a reading plan — or photograph a printed plan from church and follow it.</span></div>
+      <div class="diff-item"><b>Speak, and keep only your words.</b> <span>Journal and pray by voice; the recording is never saved, only the text you see.</span></div>
+      <div class="diff-item"><b>Grace, not guilt.</b> <span>No streaks to break, no scores, no shame for a missed day — just a door left open.</span></div>
+    </div>
+  </section>
+
   <div class="callout">
     <h3>You've been invited to test an early version</h3>
     <p>Thank you for trying John15Five before it's public. It comes through Apple's <b>TestFlight</b> app (you'll get a link). It's a real, working app — but this is a beta, so a few things are still rough, and your honest reactions are exactly what's most useful.</p>
     <ul>
       <li><b>Try what you'd actually use:</b> read a chapter, start a reading plan, journal or pray alongside it, and try the study companion.</li>
-      <li><b>One known rough edge:</b> the “Listen” read-aloud uses your phone's built-in voice, so it can sound a bit robotic. We're deciding whether to add a more natural voice — your feedback helps decide.</li>
+      <li><b>One known rough edge:</b> the “Listen” read-aloud uses your phone's built-in voice, so it can sound a bit robotic. We're working on adding a more natural voice — your feedback helps decide.</li>
       <li><b>How to send feedback:</b> in the app, <b>Settings → Send feedback</b>, or email <a href="mailto:john15five2026@outlook.com">john15five2026@outlook.com</a>. Tell us where it got in your way.</li>
     </ul>
   </div>
@@ -119,10 +141,37 @@
     <h3>Read the Bible</h3>
     <p>The whole Bible is on your phone and needs no connection, ever. Reading it leaves no record anywhere but your own device.</p>
     <ul>
-      <li>Open the Read tab, choose a book, then a chapter.</li>
+      <li>Open the Read tab, choose a book — start typing to jump to it — then a chapter.</li>
       <li>Tap once to hide the bars and let it be just the text; tap again to bring them back.</li>
       <li>Press and hold a verse to highlight it, mark it a favorite, add a note, or add it to a group.</li>
+      <li>The words of Jesus are shown in red.</li>
+      <li>It keeps your place, and marks a book as read once you've finished all of it.</li>
     </ul>
+  </div>
+
+  <div class="feature">
+    <h3>Make it your own</h3>
+    <p>A few quiet settings make the reading comfortable.</p>
+    <ul>
+      <li>Translation: the Berean Standard Bible (the default), plus the World English Bible and the King James Version — all on your phone, all free.</li>
+      <li>Text size, and a Paragraph layout that reads like a book or a Verse-by-verse layout for study.</li>
+      <li>Light, Dark, or match your phone.</li>
+    </ul>
+  </div>
+
+  <div class="feature">
+    <h3>Search</h3>
+    <p>Find a word or phrase, or jump straight to a reference.</p>
+    <ul>
+      <li>Open Search from the reader or from Journey; results appear as you type.</li>
+      <li>Type a reference like “John 3:16” to go straight there.</li>
+      <li>Sort by best match, or in Bible order.</li>
+    </ul>
+  </div>
+
+  <div class="feature">
+    <h3>Related passages</h3>
+    <p>See where Scripture speaks to Scripture. Press and hold a verse and tap “Related passages” for a list of cross-references, drawn from a large, human-voted open project. It works offline, with no AI.</p>
   </div>
 
   <div class="feature">
@@ -130,6 +179,7 @@
     <p>Rather hear the Word than read it? Tap Listen at the top of the reader and your phone reads the passage aloud in its own voice. On a plan day it reads that day's reading; otherwise it reads the chapter you're in.</p>
     <ul>
       <li>The voice comes from your phone — nothing is sent anywhere, and it works with no connection.</li>
+      <li>Set the pace and choose the voice under Settings → Reading aloud.</li>
       <li>Tap “Stop reading” whenever you like; it also stops when you move to another chapter.</li>
       <li>Want a more natural voice? On your phone: Settings → Accessibility → Spoken Content → Voices → English, and download one marked “Enhanced” (Ava, Samantha, and Zoe are good). John15Five uses it automatically.</li>
     </ul>
@@ -139,7 +189,9 @@
     <h3>Marks and groups</h3>
     <p>Everything you mark is gathered under Journey → Marks. You can also collect verses into named groups you return to — “Comfort,” “Promises,” a sermon.</p>
     <ul>
-      <li>Press and hold a verse while reading, then “Add to a group” — name a new one on the spot.</li>
+      <li>Highlight a verse in one of five colors; press and hold again to change or remove it.</li>
+      <li>Press and hold a verse, then “Add to a group” — name a new one on the spot.</li>
+      <li>Tag a mark to find it again later, and filter Marks by highlights, notes, or favorites.</li>
       <li>Open a group from Journey → Collections; press and hold a verse to take it back out.</li>
     </ul>
   </div>
@@ -148,12 +200,19 @@
 
   <div class="feature">
     <h3>Reading plans</h3>
-    <p>A plan gives you a passage a day with room to reflect. Three ways to start one, all under Journey → Plans.</p>
+    <p>A plan gives you a passage a day with room to reflect. Four ways to start one, all under Journey → Plans.</p>
     <ul>
       <li>Choose a ready-made plan from the library.</li>
       <li><span class="star">✦</span> Build one for what you're walking through — describe your situation and the study companion writes a plan you review before it's yours.</li>
       <li><span class="star">✦</span> Photograph a printed plan — snap the pages of a church handout and it becomes a plan you can follow.</li>
+      <li>Open a plan file someone shared with you.</li>
+      <li>Follow several at once and switch between them; set a plan down for later, delete one, or share a plan — the passages only, never your writing.</li>
     </ul>
+  </div>
+
+  <div class="feature">
+    <h3>Your day</h3>
+    <p>The Today tab shows one thing to do next — your plan's reading for the day, or the chapter where you left off. A ring of seven dots shows the past week at a glance, and a verse greets you once a day. No streaks, no numbers, no pressure.</p>
   </div>
 
   <div class="feature">
@@ -174,7 +233,7 @@
     <ul>
       <li>The day's reading sits right above the box so you can glance back at it.</li>
       <li>Come back to the same day and you continue the same entry; it doesn't start over.</li>
-      <li><span class="star">✦</span> “Clean this up” adds punctuation to a spoken entry — your own words are always kept.</li>
+      <li><span class="star">✦</span> “Clean this up” adds punctuation to a spoken entry; “Give me back my own words” restores it exactly as you said it. Your own words are always kept.</li>
       <li>Share a day's entry to a group, Messages, or email — only when you tap Share.</li>
     </ul>
   </div>
@@ -184,7 +243,7 @@
     <p>Keep the things you're praying for, and mark how they're answered. Say them aloud if that's easier; prayer is a spoken thing.</p>
     <ul>
       <li>Give a prayer a short title, then say or type it.</li>
-      <li>Later, add an update, mark it answered with a note, or gently set it down.</li>
+      <li>Later, add an update, mark it answered with a note, or gently set it down — and reopen it if you're praying again.</li>
     </ul>
   </div>
 
@@ -210,7 +269,7 @@
 
   <div class="feature">
     <h3>Your Journey</h3>
-    <p>A record of what you've read, written, and prayed, newest first. No streaks, no scores, no percentages. It fills in as you go.</p>
+    <p>A record of what you've read, written, and prayed, newest first. No streaks, no scores, no percentages. It fills in as you go — a first reading, a book finished, a plan begun or completed, a prayer answered.</p>
   </div>
 
   <div class="feature">
@@ -235,7 +294,7 @@
 
   <div class="callout">
     <h3>Your privacy, plainly</h3>
-    <p>Everything you write stays on your phone, encrypted. There is no account. Only three optional features send anything to a server — building a plan, asking about a passage, and cleaning up a spoken entry — and only the moment you tap. Nothing else ever leaves, and we cannot see what you read.</p>
+    <p>Everything you write stays on your phone, encrypted. There is no account. Only <b>four</b> optional features send anything to a server — building a plan, asking about a passage, cleaning up a spoken entry, and photographing a printed plan — and only the moment you tap. Nothing else ever leaves, and we cannot see what you read.</p>
     <div class="links">
       <a href="privacy.html">Full Privacy Policy →</a>
       <a href="support.html">Support &amp; FAQ →</a>
